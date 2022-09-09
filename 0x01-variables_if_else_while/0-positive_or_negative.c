@@ -3,7 +3,13 @@
 #include <time.h>
 
 /**
- * manin - printing whether n is zero, positive or negative
+ * main - printing whether n is zero, positive or negative
+ *
+ * Description: if else statements are used to determine whether
+ * the number genereted is zero, positive or negative.
+ * The function prints zero if the random number generated is zero
+ * and positive if the number is greater than zero
+ * otherwise, the program prints negative as the number is less than zero
  *
  * Return: Always (0) success
  */
