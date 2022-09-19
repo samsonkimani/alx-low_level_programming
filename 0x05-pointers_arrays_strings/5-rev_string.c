@@ -8,7 +8,7 @@
 
 void rev_string(char *s)
 {
-	chat *t = s;
+	char *t = s;
 	char n[1000];
 	short c = 0;
 
