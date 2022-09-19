@@ -1,5 +1,4 @@
 #include "main.h"
-#include <string.h>
 
 /**
  * print_array - print array elements
@@ -11,7 +10,7 @@ void print_array(int *a, int n)
 {
 	int i;
 
-	for (i = 0; i < (int)strlen(a); i++)
+	for (i = 0; i < n; i++)
 	{
 		printf("%d ,", a[i]);
 	}
