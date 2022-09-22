@@ -13,7 +13,7 @@ char *rot13(char *s)
 	char a[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char b[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-	while (s[i])
+	while (*(s + i))
 	{
 		for (j = 0; j < 52; j++)
 		{
