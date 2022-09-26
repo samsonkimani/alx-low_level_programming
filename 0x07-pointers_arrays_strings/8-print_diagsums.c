@@ -9,25 +9,23 @@
 
 void print_diagsums(int *a, int size)
 {
-	int i, j, sum1, sum2, size_minus1;
+	int i, j, sum1, sum2;
 
 	for (i = 0; i < size; i++)
 	{
 		for (j = 0; j < size; j++)
 		{
 			sum1 = a[0][0];
-			sum1 = sum1 + a[i + 1][j + 1];
+			sum1 = sum1 + a[i + 1][j];
 		}
 		break;
 	}
-	size_minus1 = size - 1
-
 	for (i = (size - 1); i >= 0; i--)
 	{
 		for (j = (size - 1); j >= 0; j--)
 		{
 			sum2 = a[size - 1][size - 1];
-			sum2 = sum2 + a[size_minus1 - 1][size_minus1 - 1];
+			sum2 = sum2 + a[i - 1][j];
 		}
 		break;
 	}
