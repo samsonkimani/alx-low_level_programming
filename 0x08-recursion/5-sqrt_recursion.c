@@ -5,7 +5,7 @@
  * @i: first input value
  * @j: second input value
  *
- * Returns: the squareroot
+ * Return: the squareroot
  */
 
 int is_square_root(int i, int j)
@@ -19,6 +19,8 @@ int is_square_root(int i, int j)
 		return (j);
 	}
 	return (is_square_root(i, j + i));
+}
+
 
 /**
  * _sqrt_recursion - return the natural squareroot of a number
