@@ -57,7 +57,7 @@ int main(int argc, char **argv)
 
 	if (number < 0)
 	{
-		return (printf("Error\n"), 1);
+		return (printf("0\n"), 1);
 	}
 	printf("%d\n", calculate_cents(number));
 	return (0);
