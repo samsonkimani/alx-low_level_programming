@@ -2,30 +2,33 @@
 #include <stdlib.h>
 
 /**
- * main - adding two numbers
- * @argc: size of array
- * @argv: array passed
+ * main - adds positive numbers
+ * @argc: size of the array
+ * @argv: the array
  *
  * Return: 0
  */
 
 int main(int argc, char *argv[])
 {
-	int i, sum;
+	int i, sum = 0;
 
-	sum = 0;
-
-	for (i = 0; i < argc; i++)
+	if (argc == 1)
 	{
-		if (i > 0)
+		return (printf("0\n"));
+	}
+
+	for (i =1; i < argc; i++)
+	{
+		if (atoi(argv[i]))
 		{
-			if (atoi(argv[i]) == 0)
-			{
-				return (printf("Error\n"), 1);
-			}
 			sum += atoi(argv[i]);
 		}
+		else
+		{
+			return (printf("Error\n"), 1);
+		}
 	}
-	printf("%d\n", sum);
-	return (0);
+	return (printf("%d\n", sum));
 }
+
