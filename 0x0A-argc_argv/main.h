@@ -5,4 +5,5 @@
 
 int _putchar(char c);
 
+int count_numbers(int n);
 #endif
