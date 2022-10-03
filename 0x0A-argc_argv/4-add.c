@@ -1,5 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+
+/**
+ * count_numbers - counting the size of an intefer
+ * @n: the integer
+ * Return: counter
+ */
+
+int count_numbers(int n)
+{
+	int counter = 0;
+
+	while (n != 0)
+	{
+		n = n / 10;
+		counter++;
+	}
+	return (counter);
+}
 
 /**
  * main - adds positive numbers
@@ -18,9 +37,11 @@ int main(int argc, char *argv[])
 		return (printf("0\n"));
 	}
 
-	for (i =1; i < argc; i++)
+	for (i = 1; i < argc; i++)
 	{
-		if (atoi(argv[i]))
+		int size = count_numbers(atoi(argv[i]));
+
+		if (atoi(argv[i]) > 0 && size == (int)strlen(argv[i]))
 		{
 			sum += atoi(argv[i]);
 		}
