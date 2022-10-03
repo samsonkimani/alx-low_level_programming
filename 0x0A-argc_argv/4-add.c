@@ -51,6 +51,7 @@ int main(int argc, char *argv[])
 			return (printf("Error\n"), 1);
 		}
 	}
-	return (printf("%d\n", sum), 0);
+	 printf("%d\n", sum);
+	 return (0);
 }
 
