@@ -20,11 +20,13 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
-
-	while (str[i] != '\0')
+	else
 	{
-		s[i] = str[i];
-		i++;
+		while (str[i] != '\0')
+		{
+			s[i] = str[i];
+			i++;
+		}
 	}
 	return (s);
 }
