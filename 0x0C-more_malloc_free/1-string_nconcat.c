@@ -1,4 +1,5 @@
-#include "main.h"
+i#include "main.h"
+#include <stdlib.h>
 
 /**
  * string_nconcat - concatenate string s1 with n bytes of s2
