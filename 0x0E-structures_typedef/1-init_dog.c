@@ -13,6 +13,11 @@
 
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	d = {name, age, owner};
+	struct dog *d;
+
+	d = &my_dog;
+	my_dog.name = name;
+	my_dog.age = age;
+	my_dog.owner = owner;
 	return (0);
 }
