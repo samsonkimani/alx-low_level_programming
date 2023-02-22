@@ -1,11 +1,12 @@
 #include "lists.h"
 
 /**
- * add_dnodeint_end - add node at end of dll
+ * add_dnodeint_end - add node at end of a linked list
  * @head: the head node to the linked list
  * @n: data to be inserted in the dll
  *
  * Return: return pointer to the new node
+ * The time complexity of this program is O(n)
  */
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
