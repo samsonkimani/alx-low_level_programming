@@ -5,6 +5,7 @@
  * @head: pointer to the first node in the list
  *
  * Return: pointer to the first node in the new list
+ * the time complexity of this algorithm is O(n)
  */
 
 listint_t *reverse_listint(listint_t **head)
