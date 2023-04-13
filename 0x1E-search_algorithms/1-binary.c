@@ -1,39 +1,68 @@
 #include "search_algos.h"
 
 /**
- * binary_search - a function to search a sorted list using binary search
- * @array: the array to search from
- * @size: the size of the array
- * @value: the value to search for
+ * recursive_search - searches for a value in an array of
+ * integers using the Binary search algorithm
  *
- * Return: the index of the array if available return the index
- * else return -1
+ *
+ * @array: input array
+ * @size: size of the array
+ * @value: value to search in
+ * Return: index of the number
  */
-
-int binary_search(int *array, size_t size, int value)
+int recursive_search(int *array, size_t size, int value);
+int recursive_search(int *array, size_t size, int value)
 {
-	size_t left = 0;
-	size_t right = size - 1;
-	size_t mid;
+	size_t mid = size / 2;
 	size_t i;
 
-	while (left <= right)
+	if (array == NULL || size == 0)
+		return (-1);
+
+	printf("Searching in array");
+
+	for (i = 0; i < size; i++)
 	{
-		printf("Searching in array: ");
-		for (i = left; i <= right; i++)
-		{
-			if (i > left)
-				printf(", ");
-			printf("%ld", i);
-		}
-		printf("\n");
-		mid = (left + right) / 2;
-		if (array[mid] < value)
-			left = mid + 1;
-		else if (array[mid] > value)
-			right = mid - 1;
+		if (i == 0)
+			printf(": ");
 		else
-			return (mid);
+			printf(", ");
+		printf("%d", array[i]);
 	}
-	return (-1);
+
+	printf("\n");
+
+	if (mid && size % 2 == 0)
+		mid--;
+
+	if (value == array[mid])
+		return ((int)mid);
+
+	if (value < array[mid])
+		return (recursive_search(array, mid, value));
+
+	mid++;
+
+	return (recursive_search(array + mid, size - mid, value) + mid);
+}
+
+/**
+ * binary_search - calls to binary_search to return
+ * the index of the number
+ *
+ * @array: input array
+ * @size: size of the array
+ * @value: value to search in
+ * Return: index of the number
+ */
+int binary_search(int *array, size_t size, int value)
+{
+	int pos;
+
+	pos = recursive_search(array, size, value);
+
+	if (pos >= 0 && array[pos] != value)
+		return (-1);
+
+	return (pos);
 }
